@@ -1,0 +1,14 @@
+FEDERATED LEARNING RESEARCH REPORT
+=============================================
+
+Total Communication Rounds: 11
+Final Global Accuracy: 95.13%
+Best Global Accuracy: 95.92%
+Best Accuracy Round: 9
+Final Global Loss: 0.1587
+Average Training Time: 18.68 seconds
+Average Aggregation Time: 0.0021 seconds
+Total Estimated Communication: 34.7312 MB
+Total Recorded Training Time: 205.52 seconds
+Total Aggregation Time: 0.0235 seconds
+90% Accuracy Convergence Round: 1
