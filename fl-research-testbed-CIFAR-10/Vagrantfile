@@ -1,0 +1,47 @@
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "debian/bookworm64"
+
+  # Shared project directory
+  config.vm.synced_folder ".", "/vagrant"
+
+  # VM definitions
+  machines = {
+    "fl-server" => {
+      ip: "192.168.56.10",
+      memory: 1536,
+      cpus: 2
+    },
+    "fl-client1" => {
+      ip: "192.168.56.11",
+      memory: 2048,
+      cpus: 2
+    },
+    "fl-client2" => {
+      ip: "192.168.56.12",
+      memory: 2048,
+      cpus: 2
+    }
+  }
+
+  machines.each do |name, settings|
+
+    config.vm.define name do |vm|
+
+      vm.vm.hostname = name
+
+      vm.vm.network "private_network",
+        ip: settings[:ip]
+
+      vm.vm.provider "virtualbox" do |vb|
+        vb.name = name
+        vb.memory = settings[:memory]
+        vb.cpus = settings[:cpus]
+        vb.gui = false
+        vb.linked_clone = true
+      end
+
+    end
+  end
+
+end

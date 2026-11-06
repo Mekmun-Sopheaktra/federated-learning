@@ -1,0 +1,19 @@
+FEDERATED LEARNING RESEARCH REPORT
+=======================================================
+
+Experiment Mode: NON-IID
+Dataset: CIFAR-10
+Total Communication Rounds: 10
+Final Global Accuracy: 66.08%
+Best Global Accuracy: 66.94%
+Best Accuracy Round: 8
+Final Global Loss: 1.1715
+Accuracy Improvement: 21.89 percentage points
+Average Client Training Time: 42.46 seconds
+Average Server Aggregation Time: 0.0035 seconds
+Cumulative Recorded Training Time: 424.58 seconds
+Cumulative Aggregation Time: 0.0351 seconds
+Average Model Size: 2423.29 KB
+Average Communication Per Round: 9.4660 MB
+Total Estimated Communication: 94.6597 MB
+90% Accuracy Round: Not reached
